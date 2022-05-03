@@ -25,12 +25,49 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Satisfy&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Cinzel&family=Indie+Flower&family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ewert&family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&family=Ewert&family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+<head> of your html
+
+<link>
+@import
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Playball&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
     <link rel="stylesheet" href="glider.min.css">
     <link rel="stylesheet" href="css/style1.css">
     
 </head>
+<style>
+    @keyframes animate{
+      0%,100%{
+          background-image: url(images/Document.jfif);
+      }
+      25%{
+        background-image: url(images/o-CHILD-READING-facebook.jpg);
+    }
+    50%{
+        background-image: url(images/5aaa3c6c4786f.jpeg);
+    }
+    75%{
+        background-image: url(images/695531569.jpg);
+    }
+    
+  }
+</style>
 <body>
     <div class="wrapper">
         <nav class="desktop-nav">
@@ -52,7 +89,7 @@
                     <a onclick="location.href='programs'">Program</a>
                 </li>
                 <li>
-                    <a onclick="location.href='#getinvolved'">Get Involved</a>
+                    <a onclick="location.href='gallary'">Gallary</a>
                 </li>
                 <li>
                     <a onclick="location.href='contactus'">Contact us</a>
@@ -88,7 +125,7 @@
      </div>
         <!--end of desktop nav-->
         <section id="about" class="hero-container">
-            <img src="images/Our Work1.svg" alt="">
+            <img src="images/About Us.jpg" alt="">
             <div class="left">
                 <img src="images/image 1.png" alt="">
             </div>
@@ -101,7 +138,8 @@
                 <br>
                 <br>
                 <br>
-                <a href="homepage.html" class="butn">Learn more</a>
+                <a onclick="location.href='homepage'" class="butn">Learn more</a>
+                
                 
 
             </div>
@@ -121,7 +159,8 @@
          <div class="photo-container">
            
            <div class="content">
-             <a href="Programs.html" target="_blank">
+               <a onclick="location.href='programs'">
+             
                <div class="content-overlay"></div>
                <img class="content-image" src="images/education-banner-768x317.png">
                <div class="content-details fadeIn-bottom">
@@ -130,13 +169,13 @@
                </div>
              </a>
            </div>
-           <h3 class="title">EDUCATION</h3>
          </div>
          
          <div class="photo-container">
            
            <div class="content">
-             <a href="vunrable.html" target="_blank">
+               
+             <a onclick="location.href='vunrable'" target="_blank">
                <div class="content-overlay"></div>
                <img class="content-image" src="images/banner-Vulnerable-Children-768x317.png">
                <div class="content-details fadeIn-bottom">
@@ -145,13 +184,14 @@
                </div>
              </a>
            </div>
-           <h3 class="title">VULNERABLE CHILDERN</h3>
+           
          </div>
          
          <div class="photo-container">
           
            <div class="content">
-             <a href="vocational training.html" target="_blank">
+               <a onclick="location.href='vocationaltraining'" target="_blank">
+             
                <div class="content-overlay"></div>
                <img class="content-image" src="images/Construction.png">
                <div class="content-details fadeIn-bottom">
@@ -160,7 +200,7 @@
                </div>
              </a>
            </div>
-           <h3 class="title">VOCATIONAL TRANING</h3>
+           
          </div>
          
           </div>
@@ -195,9 +235,10 @@
               <br>
               <br>
               <br>
-              <br><br><br>
+              
             <ul>
-                <a href="gallary.html" class="button">Learn more</a>
+                <a onclick="location.href='gallary'" class="butn">Learn more</a>
+                
             </ul>
           </div>
           

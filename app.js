@@ -35,12 +35,46 @@ var userSchema = new mongoose.Schema({
     },
     phone: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     message: {
         type: String,
         required: true
     },
+    street:{
+        type:String,
+        required:true
+        
+    },
+    city: {
+        type:String,
+        required:true
+    },
+    state: {
+        type:String,
+        required:true
+    },
+    pincode:
+    {
+        type:String,
+        required:true
+    },
+    creditcardno: {
+        type:String,
+        required:true,
+        unique: true
+    },
+    exp:{
+        type:String,
+        required:true
+    },
+    ccv:{
+        type:String,
+        required:true,
+        unique: true
+    },
+
 });
 
 var user = mongoose.model('user', userSchema);
@@ -56,6 +90,19 @@ admin.save(function(err, admin) {
     if (err) return console.log(err);
     console.log(admin.username);
 });
+var user = mongoose.model('user', userSchema);
+
+var admin = new user({
+    name: "Medha",
+    street: "151",
+    city:"ajmer",
+    state: "Rajasthan",
+    pincode: "304001",
+    creditcardno:123456789,
+    exp: 12/04,
+    ccv: 258,
+    
+});
 
 
 
@@ -70,7 +117,7 @@ app.set('views', './views');
 app.get('/', (req, res) => {
     res.render("aboutus");
 });
-app.get('/gallery', (req, res) => {
+app.get('/gallary', (req, res) => {
     res.render("gallary");
 });
 
@@ -87,12 +134,27 @@ app.post('/contactus', urlencodedParser, async(req, res) => {
     });
 
     registerUser.save();
-    res.render("contactus", { message: "Successfully registered!" });
+    res.render("contactus", { message: "Successfully sended!" });
 });
 
 
 app.get('/form', (req, res) => {
-    res.render("form");
+    res.render("form",{ message: "Donation" });
+});
+app.post('/contactus', urlencodedParser, async(req, res) => {
+    var registerUser = new user({
+        name: req.body.name,
+        street: req.body.street,
+        city:req.body.city,
+        state: req.body.state,
+        pincode: req.body.pincode,
+        creditcardno:req.body.creditcardno,
+        exp: req.bodr.exp,
+        ccv: req.bodr.ccv,
+    });
+
+    registerUser. save();
+    res. render("form", { message: "Thankyou!" });
 });
 
 app.get('/programs', (req, res) => {
@@ -103,7 +165,7 @@ app.get('/vocationaltraining', (req, res) => {
     res.render("vocationaltraining");
 });
 
-app.get('/vulnerable', (req, res) => {
+app.get('/vunrable', (req, res) => {
     res.render("vunrable");
 });
 
